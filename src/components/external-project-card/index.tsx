@@ -68,60 +68,91 @@ const ExternalProjectCard = ({
   };
 
   const renderExternalProjects = () => {
-    return externalProjects.map((item, index) => (
-      <a
-        className="card shadow-md card-sm bg-base-100 cursor-pointer"
-        key={index}
-        href={item.link}
-        onClick={(e) => {
-          e.preventDefault();
-
-          try {
-            if (googleAnalyticId) {
-              ga.event('Click External Project', {
-                post: item.title,
-              });
-            }
-          } catch (error) {
-            console.error(error);
-          }
-
-          window?.open(item.link, '_blank');
-        }}
-      >
-        <div className="p-8 h-full w-full">
-          <div className="flex items-center flex-col">
-            <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">
-                    {item.title}
-                  </h2>
-                  {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-24 h-24 mask mask-squircle">
-                        <LazyImage
-                          src={item.imageUrl}
-                          alt={'thumbnail'}
-                          placeholder={skeleton({
-                            widthCls: 'w-full',
-                            heightCls: 'h-full',
-                            shape: '',
-                          })}
-                        />
-                      </div>
+    return externalProjects.map((item, index) => {
+      // About Me 섹션인지 확인 (제목이 비어있고 링크가 없는 경우)
+      const isAboutMe = !item.title && !item.link && !item.imageUrl;
+      
+      if (isAboutMe) {
+        return (
+          <div
+            className="card shadow-md card-sm bg-base-100 col-span-1 lg:col-span-2"
+            key={index}
+          >
+            <div className="p-8 h-full w-full">
+              <div className="flex items-center flex-col">
+                <div className="w-full max-w-4xl mx-auto">
+                  <div className="px-4">
+                    <div className="text-center w-full">
+                      <div 
+                        className="text-base-content text-base leading-relaxed text-justify prose prose-sm max-w-none"
+                        dangerouslySetInnerHTML={{
+                          __html: item.description?.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary">$1</strong>') || ''
+                        }}
+                      />
                     </div>
-                  )}
-                  <p className="mt-2 text-base-content text-sm text-justify">
-                    {item.description}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
-    ));
+        );
+      }
+      
+      return (
+        <a
+          className="card shadow-md card-sm bg-base-100 cursor-pointer"
+          key={index}
+          href={item.link}
+          onClick={(e) => {
+            e.preventDefault();
+
+            try {
+              if (googleAnalyticId) {
+                ga.event('Click External Project', {
+                  post: item.title,
+                });
+              }
+            } catch (error) {
+              console.error(error);
+            }
+
+            window?.open(item.link, '_blank');
+          }}
+        >
+          <div className="p-8 h-full w-full">
+            <div className="flex items-center flex-col">
+              <div className="w-full">
+                <div className="px-4">
+                  <div className="text-center w-full">
+                    <h2 className="font-medium text-center opacity-60 mb-2">
+                      {item.title}
+                    </h2>
+                    {item.imageUrl && (
+                      <div className="avatar opacity-90">
+                        <div className="w-24 h-24 mask mask-squircle">
+                          <LazyImage
+                            src={item.imageUrl}
+                            alt={'thumbnail'}
+                            placeholder={skeleton({
+                              widthCls: 'w-full',
+                              heightCls: 'h-full',
+                              shape: '',
+                            })}
+                          />
+                        </div>
+                      </div>
+                    )}
+                    <p className="mt-2 text-base-content text-sm text-justify">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      );
+    });
   };
 
   return (
@@ -138,7 +169,21 @@ const ExternalProjectCard = ({
                     className: 'rounded-xl',
                   })
                 ) : (
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl">
+                  <div 
+                    className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl cursor-pointer hover:bg-primary/20 transition-colors"
+                    onClick={() => {
+                      // 외부 링크 아이콘 클릭 이벤트
+                      try {
+                        if (googleAnalyticId) {
+                          ga.event('Click External Link Icon', {
+                            section: header,
+                          });
+                        }
+                      } catch (error) {
+                        console.error(error);
+                      }
+                    }}
+                  >
                     <MdOpenInNew className="text-2xl" />
                   </div>
                 )}

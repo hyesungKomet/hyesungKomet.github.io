@@ -1,5 +1,6 @@
 export interface SanitizedGithub {
   username: string;
+  customAvatar?: string;
 }
 
 export interface SanitizedGitHubProjects {
@@ -34,6 +35,7 @@ export interface SanitizedExternalProjects {
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
+  about: SanitizedExternalProjects;
 }
 
 export interface SanitizedSEO {

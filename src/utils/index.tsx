@@ -31,6 +31,7 @@ export const getSanitizedConfig = (
     return {
       github: {
         username: config.github.username,
+        customAvatar: config.github.customAvatar,
       },
       projects: {
         github: {
@@ -54,6 +55,10 @@ export const getSanitizedConfig = (
         external: {
           header: config?.projects?.external?.header || 'My Projects',
           projects: config?.projects?.external?.projects || [],
+        },
+        about: {
+          header: config?.projects?.about?.header || 'About Me',
+          projects: config?.projects?.about?.projects || [],
         },
       },
       seo: {

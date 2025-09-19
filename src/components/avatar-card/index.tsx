@@ -55,6 +55,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
                     heightCls: 'h-full',
                     shape: '',
                   })}
+                  style={{ objectPosition: 'center 10%' }}
                 />
               }
             </div>
@@ -89,7 +90,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               download
               rel="noreferrer"
             >
-              Download Resume
+              Download CV
             </a>
           ))}
       </div>

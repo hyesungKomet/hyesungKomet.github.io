@@ -105,7 +105,7 @@ const GitProfile = ({ config }: { config: Config }) => {
       const data = response.data;
 
       setProfile({
-        avatar: data.avatar_url,
+        avatar: sanitizedConfig.github.customAvatar || data.avatar_url,
         name: data.name || ' ',
         bio: data.bio || '',
         location: data.location || '',
@@ -252,6 +252,16 @@ const GitProfile = ({ config }: { config: Config }) => {
                     <PublicationCard
                       loading={loading}
                       publications={sanitizedConfig.publications}
+                    />
+                  )}
+                  {sanitizedConfig.projects.about.projects.length !== 0 && (
+                    <ExternalProjectCard
+                      loading={loading}
+                      header={sanitizedConfig.projects.about.header}
+                      externalProjects={
+                        sanitizedConfig.projects.about.projects
+                      }
+                      googleAnalyticId={sanitizedConfig.googleAnalytics.id}
                     />
                   )}
                   {sanitizedConfig.projects.external.projects.length !== 0 && (

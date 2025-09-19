@@ -3,6 +3,11 @@ interface Github {
    * GitHub org/user name
    */
   username: string;
+  
+  /**
+   * Custom profile image URL
+   */
+  customAvatar?: string;
 }
 
 interface GitHubProjects {
@@ -87,6 +92,8 @@ interface Projects {
   github?: GitHubProjects;
 
   external?: ExternalProjects;
+  
+  about?: ExternalProjects;
 }
 
 interface SEO {
