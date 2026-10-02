@@ -1,10 +1,9 @@
 ---
 title: "About"
-description: "Hyesung Kim. Building search, LLM serving and image generation pipelines."
+description: "I gather fragments of unfamiliar thoughts and technologies, assemble them into strange shapes, and record the failures, obsessions and chance discoveries that bloom inside."
 ---
 
-Hyesung Kim. I build search, LLM serving and image generation pipelines.
-This is where I write down what I tried, what I got wrong, and the numbers I measured along the way.
+I gather fragments of unfamiliar thoughts and technologies, assemble them into strange shapes, and record the failures, obsessions and chance discoveries that bloom inside.
 
 **[CV (PDF)](/Hyesung_Kim_CV.pdf)** | [GitHub](https://github.com/hyesungKomet) | [Email](mailto:khsfun0312khsfun@gmail.com)
 

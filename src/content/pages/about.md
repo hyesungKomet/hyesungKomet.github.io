@@ -1,10 +1,9 @@
 ---
 title: "소개"
-description: "Hyesung Kim. 검색, LLM 서빙, 이미지 생성 파이프라인을 만들고 있습니다."
+description: "낯선 사유와 기술의 파편을 주워 모아 기묘한 형체를 만들고, 그 안에서 피어난 실패와 집착, 우연한 발견을 기록합니다."
 ---
 
-Hyesung Kim. 검색, LLM 서빙, 이미지 생성 파이프라인을 만들고 있습니다.
-여기에는 해본 것과 틀렸던 것, 그때 잰 숫자를 기록합니다.
+낯선 사유와 기술의 파편을 주워 모아 기묘한 형체를 만들고, 그 안에서 피어난 실패와 집착, 우연한 발견을 기록합니다.
 
 **[CV (PDF)](/Hyesung_Kim_CV.pdf)** | [GitHub](https://github.com/hyesungKomet) | [Email](mailto:khsfun0312khsfun@gmail.com)
 
