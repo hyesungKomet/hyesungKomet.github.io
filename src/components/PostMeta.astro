@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { useTranslations } from "@/i18n";
+
+type Props = {
+  category?: CollectionEntry<"posts">["data"]["category"];
+  type?: CollectionEntry<"posts">["data"]["type"];
+  project?: CollectionEntry<"posts">["data"]["project"];
+  class?: string;
+};
+
+const { category, type, project, class: className } = Astro.props;
+const t = useTranslations(Astro.currentLocale);
+
+const items = [
+  category && { label: t.post.category, value: category },
+  type && { label: t.post.type, value: type },
+  project && { label: t.post.project, value: project },
+].filter(Boolean) as { label: string; value: string }[];
+---
+
+{
+  items.length > 0 && (
+    <ul
+      class:list={[
+        "text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 text-xs",
+        className,
+      ]}
+    >
+      {items.map(({ label, value }) => (
+        <li
+          class="border-border rounded border px-1.5 py-0.5"
+          title={label}
+          data-meta={label}
+        >
+          <span class="sr-only">{label}: </span>
+          {value}
+        </li>
+      ))}
+    </ul>
+  )
+}

@@ -1,0 +1,12 @@
+---
+import PostDetails from "@/components/PostDetails.astro";
+import { getPostStaticPaths } from "@/utils/getPostStaticPaths";
+
+export async function getStaticPaths() {
+  return getPostStaticPaths("en");
+}
+
+const { post, prevPost, nextPost } = Astro.props;
+---
+
+<PostDetails {post} {prevPost} {nextPost} />
