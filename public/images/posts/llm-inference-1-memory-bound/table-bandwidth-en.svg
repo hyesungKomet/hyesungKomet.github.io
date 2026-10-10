@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 286"><style>text { font-family: 'Apple SD Gothic Neo','Pretendard','Noto Sans KR',system-ui,sans-serif; }</style>
+<rect x="0.5" y="0.5" width="639" height="285" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+<text x="30" y="44" fill="#282728" font-size="16" font-weight="700">H100 SXM bandwidth by path</text>
+<rect x="30" y="70" width="580" height="44" fill="#eef1f5"/>
+<text x="44" y="97.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Path</text>
+<text x="274" y="97.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Connects</text>
+<text x="596" y="97.0" fill="#282728" font-size="13" font-weight="700" text-anchor="end">Bandwidth</text>
+<line x1="30" y1="114" x2="610" y2="114" stroke="#e5e7eb"/>
+<text x="44" y="141.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">HBM → compute units</text>
+<text x="274" y="141.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">inside the GPU</text>
+<text x="596" y="141.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">3.35 TB/s</text>
+<line x1="30" y1="158" x2="610" y2="158" stroke="#e5e7eb"/>
+<text x="44" y="185.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">NVLink</text>
+<text x="274" y="185.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">GPU ↔ GPU</text>
+<text x="596" y="185.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">900 GB/s</text>
+<line x1="30" y1="202" x2="610" y2="202" stroke="#e5e7eb"/>
+<text x="44" y="229.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">PCIe Gen5</text>
+<text x="274" y="229.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">CPU ↔ GPU</text>
+<text x="596" y="229.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">128 GB/s</text>
+</svg>

@@ -27,6 +27,7 @@ export const POST_TYPES = [
   "system-evolution",
   "designing-for-failure",
   "lessons-learned",
+  "tech-essay",
 ] as const;
 
 const posts = defineCollection({

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <style>
+    text { font-family: 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#006cac"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="799" height="419" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+
+  <text x="30" y="40" fill="#282728" font-size="16" font-weight="700">Same request, different wait</text>
+  <text x="30" y="60" fill="#6b7280" font-size="11">The GPU does the same work in both rows. Only the moment the user sees the first word differs</text>
+
+  <!-- Row A: 한꺼번에 받기 -->
+  <text x="30" y="108" fill="#282728" font-size="13" font-weight="600">All at once</text>
+  <text x="30" y="125" fill="#6b7280" font-size="11">returned after the last token</text>
+  <rect x="180" y="96" width="90" height="34" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="225" y="117" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">prefill</text>
+  <g fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2">
+    <rect x="276" y="102" width="22" height="22" rx="3"/><rect x="302" y="102" width="22" height="22" rx="3"/>
+    <rect x="328" y="102" width="22" height="22" rx="3"/><rect x="354" y="102" width="22" height="22" rx="3"/>
+    <rect x="380" y="102" width="22" height="22" rx="3"/><rect x="406" y="102" width="22" height="22" rx="3"/>
+    <rect x="432" y="102" width="22" height="22" rx="3"/><rect x="458" y="102" width="22" height="22" rx="3"/>
+    <rect x="484" y="102" width="22" height="22" rx="3"/><rect x="510" y="102" width="22" height="22" rx="3"/>
+    <rect x="536" y="102" width="22" height="22" rx="3"/><rect x="562" y="102" width="22" height="22" rx="3"/>
+    <rect x="588" y="102" width="22" height="22" rx="3"/><rect x="614" y="102" width="22" height="22" rx="3"/>
+  </g>
+  <line x1="642" y1="88" x2="642" y2="140" stroke="#e11d48" stroke-width="2"/>
+  <text x="650" y="104" fill="#e11d48" font-size="11" font-weight="600">First text appears here</text>
+  <text x="650" y="120" fill="#6b7280" font-size="10">wait = full generation time</text>
+
+  <!-- Row B: 스트리밍 -->
+  <text x="30" y="218" fill="#282728" font-size="13" font-weight="600">Streaming</text>
+  <text x="30" y="235" fill="#6b7280" font-size="11">tokens sent as they are made</text>
+  <rect x="180" y="206" width="90" height="34" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="225" y="227" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">prefill</text>
+  <g fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2">
+    <rect x="276" y="212" width="22" height="22" rx="3"/><rect x="302" y="212" width="22" height="22" rx="3"/>
+    <rect x="328" y="212" width="22" height="22" rx="3"/><rect x="354" y="212" width="22" height="22" rx="3"/>
+    <rect x="380" y="212" width="22" height="22" rx="3"/><rect x="406" y="212" width="22" height="22" rx="3"/>
+    <rect x="432" y="212" width="22" height="22" rx="3"/><rect x="458" y="212" width="22" height="22" rx="3"/>
+    <rect x="484" y="212" width="22" height="22" rx="3"/><rect x="510" y="212" width="22" height="22" rx="3"/>
+    <rect x="536" y="212" width="22" height="22" rx="3"/><rect x="562" y="212" width="22" height="22" rx="3"/>
+    <rect x="588" y="212" width="22" height="22" rx="3"/><rect x="614" y="212" width="22" height="22" rx="3"/>
+  </g>
+  <line x1="273" y1="198" x2="273" y2="250" stroke="#006cac" stroke-width="2"/>
+  <!-- TTFT bracket -->
+  <line x1="180" y1="262" x2="271" y2="262" stroke="#006cac" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  <text x="225" y="280" fill="#006cac" font-size="11" font-weight="600" text-anchor="middle">TTFT</text>
+  <text x="225" y="295" fill="#6b7280" font-size="10" text-anchor="middle">to the first token</text>
+  <!-- ITL bracket -->
+  <line x1="302" y1="198" x2="302" y2="206" stroke="#6b7280" stroke-width="1"/>
+  <line x1="328" y1="198" x2="328" y2="206" stroke="#6b7280" stroke-width="1"/>
+  <line x1="302" y1="202" x2="328" y2="202" stroke="#6b7280" stroke-width="1"/>
+  <text x="336" y="198" fill="#6b7280" font-size="10">ITL: gap between tokens</text>
+  <text x="650" y="222" fill="#006cac" font-size="11" font-weight="600">Text starts right</text>
+  <text x="650" y="238" fill="#006cac" font-size="11" font-weight="600">after prefill</text>
+
+  <!-- time axis -->
+  <line x1="180" y1="330" x2="760" y2="330" stroke="#6b7280" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="760" y="350" fill="#6b7280" font-size="11" text-anchor="end">time</text>
+
+  <!-- legend -->
+  <rect x="30" y="372" width="16" height="16" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="54" y="385" fill="#282728" font-size="11">prefill: process the whole input at once</text>
+  <rect x="280" y="372" width="16" height="16" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="304" y="385" fill="#282728" font-size="11">decode: generate one token at a time</text>
+  <text x="770" y="385" fill="#6b7280" font-size="10" text-anchor="end">not to scale</text>
+</svg>

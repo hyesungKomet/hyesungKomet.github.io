@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 470">
+  <style>
+    text { font-family: 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+    <marker id="arrow-alert" markerWidth="16" markerHeight="14" refX="14" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 16 7, 0 14" fill="#e11d48"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="839" height="469" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+
+  <text x="30" y="40" fill="#282728" font-size="16" font-weight="700">decode 때 weight는 어느 길로 오나</text>
+  <text x="30" y="60" fill="#6b7280" font-size="11">NVIDIA H100 SXM 기준. 굵기는 대역폭 순서만 나타내고 축척은 아님</text>
+
+  <!-- GPU package boundary -->
+  <rect x="30" y="85" width="515" height="210" rx="12" fill="none" stroke="#d97706" stroke-width="1.2" stroke-dasharray="8,4"/>
+  <text x="44" y="104" fill="#d97706" font-size="11" font-weight="600">GPU 한 장 (같은 패키지)</text>
+
+  <!-- compute -->
+  <rect x="60" y="130" width="150" height="70" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="135" y="160" fill="#282728" font-size="13" font-weight="600" text-anchor="middle">연산 유닛</text>
+  <text x="135" y="178" fill="#6b7280" font-size="11" text-anchor="middle">요리사</text>
+
+  <!-- L2 -->
+  <rect x="60" y="215" width="150" height="60" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="135" y="241" fill="#282728" font-size="13" font-weight="600" text-anchor="middle">L2 캐시</text>
+  <text x="135" y="259" fill="#6b7280" font-size="11" text-anchor="middle">50MB, 연산 바로 옆</text>
+
+  <!-- HBM -->
+  <rect x="370" y="130" width="160" height="70" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="160" fill="#282728" font-size="13" font-weight="600" text-anchor="middle">HBM</text>
+  <text x="450" y="178" fill="#6b7280" font-size="11" text-anchor="middle">80GB, weight와 KV Cache</text>
+
+  <!-- HBM -> compute, bottleneck -->
+  <line x1="368" y1="165" x2="212" y2="165" stroke="#e11d48" stroke-width="6" marker-end="url(#arrow-alert)"/>
+  <text x="291" y="148" fill="#e11d48" font-size="13" font-weight="700" text-anchor="middle">3.35 TB/s</text>
+  <text x="291" y="192" fill="#e11d48" font-size="11" font-weight="600" text-anchor="middle">decode의 병목</text>
+  <text x="291" y="208" fill="#6b7280" font-size="10" text-anchor="middle">토큰마다 weight 전체를 이 길로</text>
+
+  <!-- other GPU via NVLink -->
+  <rect x="650" y="130" width="160" height="70" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="730" y="160" fill="#282728" font-size="13" font-weight="600" text-anchor="middle">다른 GPU</text>
+  <text x="730" y="178" fill="#6b7280" font-size="11" text-anchor="middle">모델을 나눠 올렸을 때</text>
+  <line x1="646" y1="160" x2="534" y2="160" stroke="#6b7280" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="534" y1="172" x2="646" y2="172" stroke="#6b7280" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <text x="597" y="148" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">NVLink</text>
+  <text x="597" y="192" fill="#6b7280" font-size="11" text-anchor="middle">900 GB/s</text>
+
+  <!-- CPU via PCIe -->
+  <rect x="370" y="350" width="160" height="70" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="450" y="380" fill="#282728" font-size="13" font-weight="600" text-anchor="middle">CPU와 메모리</text>
+  <text x="450" y="398" fill="#6b7280" font-size="11" text-anchor="middle">모델을 처음 올릴 때</text>
+  <line x1="450" y1="348" x2="450" y2="204" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="462" y="312" fill="#282728" font-size="12" font-weight="600">PCIe Gen5</text>
+  <text x="462" y="329" fill="#6b7280" font-size="11">128 GB/s</text>
+
+  <!-- note -->
+  <text x="30" y="445" fill="#6b7280" font-size="11">70B 모델(FP16) weight 140GB ÷ 3.35 TB/s ≈ 0.042초 → 사용자 한 명에게 초당 약 24토큰이 천장</text>
+</svg>
