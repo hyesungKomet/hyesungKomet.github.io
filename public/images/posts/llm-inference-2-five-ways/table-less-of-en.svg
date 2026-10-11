@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 354"><style>text { font-family: 'Apple SD Gothic Neo','Pretendard','Noto Sans KR',system-ui,sans-serif; }</style>
+<rect x="0.5" y="0.5" width="709" height="353" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+<text x="30" y="44" fill="#282728" font-size="16" font-weight="700">What each method does less of</text>
+<rect x="30" y="70" width="650" height="44" fill="#eef1f5"/>
+<text x="44" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Method</text>
+<text x="214" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">What it does less of</text>
+<line x1="30" y1="114" x2="680" y2="114" stroke="#e5e7eb"/>
+<text x="44" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Batching</text>
+<text x="214" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Moving the weights separately for each user</text>
+<line x1="30" y1="156" x2="680" y2="156" stroke="#e5e7eb"/>
+<text x="44" y="181.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">GQA</text>
+<text x="214" y="181.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Storing and reading KV cache</text>
+<line x1="30" y1="198" x2="680" y2="198" stroke="#e5e7eb"/>
+<text x="44" y="223.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">PagedAttention</text>
+<text x="214" y="223.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Reserving memory that never gets used</text>
+<line x1="30" y1="240" x2="680" y2="240" stroke="#e5e7eb"/>
+<text x="44" y="265.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Prefix caching</text>
+<text x="214" y="265.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Recomputing the same prompt prefix (in exchange for storing more)</text>
+<line x1="30" y1="282" x2="680" y2="282" stroke="#e5e7eb"/>
+<text x="44" y="307.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Groq</text>
+<text x="214" y="307.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Moving weights from HBM to the compute units</text>
+</svg>

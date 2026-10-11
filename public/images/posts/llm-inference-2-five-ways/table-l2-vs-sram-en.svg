@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 306"><style>text { font-family: 'Apple SD Gothic Neo','Pretendard','Noto Sans KR',system-ui,sans-serif; }</style>
+<rect x="0.5" y="0.5" width="769" height="305" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+<text x="30" y="44" fill="#282728" font-size="16" font-weight="700">GPU L2 cache vs. Groq SRAM</text>
+<rect x="30" y="70" width="710" height="44" fill="#eef1f5"/>
+<text x="44" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start"></text>
+<text x="234" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">GPU L2 cache</text>
+<text x="494" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Groq SRAM</text>
+<line x1="30" y1="114" x2="740" y2="114" stroke="#e5e7eb"/>
+<text x="44" y="148.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Role</text>
+<text x="234" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Temporary holding area in front of a</text>
+<text x="234" y="157.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">large HBM</text>
+<text x="494" y="148.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Main memory that holds the weights</text>
+<line x1="30" y1="174" x2="740" y2="174" stroke="#e5e7eb"/>
+<text x="44" y="208.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">When data isn't there</text>
+<text x="234" y="208.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Fetch it again from HBM</text>
+<text x="494" y="199.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Doesn't happen; there's no HBM</text>
+<text x="494" y="217.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">behind it</text>
+<line x1="30" y1="234" x2="740" y2="234" stroke="#e5e7eb"/>
+<text x="44" y="259.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Who decides what goes in</text>
+<text x="234" y="259.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Hardware, at run time</text>
+<text x="494" y="259.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">The compiler, ahead of time</text>
+</svg>

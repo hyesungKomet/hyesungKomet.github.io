@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 270"><style>text { font-family: 'Apple SD Gothic Neo','Pretendard','Noto Sans KR',system-ui,sans-serif; }</style>
+<rect x="0.5" y="0.5" width="689" height="269" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+<text x="30" y="44" fill="#282728" font-size="16" font-weight="700">K/V heads across 8 GPUs</text>
+<rect x="30" y="70" width="630" height="44" fill="#eef1f5"/>
+<text x="44" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Design</text>
+<text x="266" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="end">K/V heads</text>
+<text x="294" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Per GPU, with 8 GPUs</text>
+<text x="646" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="end">Total across 8</text>
+<line x1="30" y1="114" x2="660" y2="114" stroke="#e5e7eb"/>
+<text x="44" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">MHA</text>
+<text x="266" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">64</text>
+<text x="294" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">8 (divided)</text>
+<text x="646" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">64</text>
+<line x1="30" y1="156" x2="660" y2="156" stroke="#e5e7eb"/>
+<text x="44" y="181.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">GQA</text>
+<text x="266" y="181.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">8</text>
+<text x="294" y="181.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">1 (divided)</text>
+<text x="646" y="181.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">8</text>
+<line x1="30" y1="198" x2="660" y2="198" stroke="#e5e7eb"/>
+<text x="44" y="223.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">MQA</text>
+<text x="266" y="223.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">1</text>
+<text x="294" y="223.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">1 (copied)</text>
+<text x="646" y="223.0" fill="#282728" font-size="13" font-weight="400" text-anchor="end">8</text>
+</svg>

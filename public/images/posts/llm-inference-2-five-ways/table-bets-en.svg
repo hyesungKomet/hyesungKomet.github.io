@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 342"><style>text { font-family: 'Apple SD Gothic Neo','Pretendard','Noto Sans KR',system-ui,sans-serif; }</style>
+<rect x="0.5" y="0.5" width="929" height="341" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+<text x="30" y="44" fill="#282728" font-size="16" font-weight="700">Different bets</text>
+<rect x="30" y="70" width="870" height="44" fill="#eef1f5"/>
+<text x="44" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Approach</text>
+<text x="264" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">How it saw the bottleneck</text>
+<text x="474" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Fix</text>
+<text x="704" y="96.0" fill="#282728" font-size="13" font-weight="700" text-anchor="start">Cost</text>
+<line x1="30" y1="114" x2="900" y2="114" stroke="#e5e7eb"/>
+<text x="44" y="139.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Serve more per read (batching,</text>
+<text x="44" y="157.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">GQA, PagedAttention, prefix</text>
+<text x="44" y="175.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">caching)</text>
+<text x="264" y="148.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Each read of the weights</text>
+<text x="264" y="166.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">serves only one user</text>
+<text x="474" y="148.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Serve many users per read, and</text>
+<text x="474" y="166.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">save KV space to make room</text>
+<text x="704" y="148.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Per-user speed stays capped</text>
+<text x="704" y="166.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">by bandwidth</text>
+<line x1="30" y1="192" x2="900" y2="192" stroke="#e5e7eb"/>
+<text x="44" y="226.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Compress the KV (MLA)</text>
+<text x="264" y="217.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Storing K and V as-is is too</text>
+<text x="264" y="235.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">big</text>
+<text x="474" y="217.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Store a small compressed latent</text>
+<text x="474" y="235.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">instead</text>
+<text x="704" y="217.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">The model has to be trained</text>
+<text x="704" y="235.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">with MLA</text>
+<line x1="30" y1="252" x2="900" y2="252" stroke="#e5e7eb"/>
+<text x="44" y="286.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Keep weights close (Groq)</text>
+<text x="264" y="286.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">The path from HBM is slow</text>
+<text x="474" y="277.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Keep weights in SRAM next to</text>
+<text x="474" y="295.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">the compute</text>
+<text x="704" y="277.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">Hundreds of chips; weak at</text>
+<text x="704" y="295.0" fill="#282728" font-size="13" font-weight="400" text-anchor="start">long contexts and many users</text>
+</svg>

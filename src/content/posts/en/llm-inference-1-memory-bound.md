@@ -15,7 +15,7 @@ draft: false
 
 > Series **LLM inference, from compute to memory** (1/3)
 > 1. Doubling FLOPS won't make ChatGPT faster (this post)
-> 2. Five ways to make ChatGPT faster are all the same idea (coming soon)
+> 2. [Five ways to make ChatGPT faster are all the same idea](/en/posts/llm-inference-2-five-ways/)
 > 3. Why NVIDIA started splitting inference into three pieces (coming soon)
 
 ## The small model I gave up on

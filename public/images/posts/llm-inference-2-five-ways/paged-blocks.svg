@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500">
+  <style>
+    text { font-family: 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#006cac"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="879" height="499" rx="12" fill="#f7f8fa" stroke="#e5e7eb"/>
+  <text x="30" y="40" fill="#282728" font-size="16" font-weight="700">block table이 흩어진 칸을 하나의 대화로 잇는다</text>
+  <text x="30" y="60" fill="#6b7280" font-size="11">같은 system prompt로 시작한 두 사용자 A, B. block 하나 = 토큰 16개</text>
+  <text x="30" y="98" fill="#282728" font-size="13" font-weight="600">사용자 A의 block table</text>
+  <text x="38" y="118" fill="#6b7280" font-size="10">논리</text><text x="180" y="118" fill="#6b7280" font-size="10">물리</text>
+  <rect x="30" y="126" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="146" fill="#282728" font-size="11" font-weight="600">0</text>
+  <text x="56" y="146" fill="#6b7280" font-size="10">system prompt</text>
+  <rect x="176" y="126" width="56" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="204" y="146" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P5</text>
+  <rect x="30" y="164" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="184" fill="#282728" font-size="11" font-weight="600">1</text>
+  <text x="56" y="184" fill="#6b7280" font-size="10">system prompt</text>
+  <rect x="176" y="164" width="56" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="204" y="184" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P1</text>
+  <rect x="30" y="202" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="222" fill="#282728" font-size="11" font-weight="600">2</text>
+  <text x="56" y="222" fill="#6b7280" font-size="10">system prompt</text>
+  <rect x="176" y="202" width="56" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="204" y="222" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P7</text>
+  <rect x="30" y="240" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="260" fill="#282728" font-size="11" font-weight="600">3</text>
+  <text x="56" y="260" fill="#6b7280" font-size="10">prompt 끝 + 이어 씀</text>
+  <rect x="176" y="240" width="56" height="32" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="204" y="260" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P3</text>
+  <rect x="30" y="278" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="298" fill="#282728" font-size="11" font-weight="600">4</text>
+  <text x="56" y="298" fill="#6b7280" font-size="10">각자의 대화</text>
+  <rect x="176" y="278" width="56" height="32" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="204" y="298" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P4</text>
+  <text x="270" y="98" fill="#282728" font-size="13" font-weight="600">사용자 B의 block table</text>
+  <text x="278" y="118" fill="#6b7280" font-size="10">논리</text><text x="420" y="118" fill="#6b7280" font-size="10">물리</text>
+  <rect x="270" y="126" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="280" y="146" fill="#282728" font-size="11" font-weight="600">0</text>
+  <text x="296" y="146" fill="#6b7280" font-size="10">system prompt</text>
+  <rect x="416" y="126" width="56" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="444" y="146" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P5</text>
+  <rect x="270" y="164" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="280" y="184" fill="#282728" font-size="11" font-weight="600">1</text>
+  <text x="296" y="184" fill="#6b7280" font-size="10">system prompt</text>
+  <rect x="416" y="164" width="56" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="444" y="184" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P1</text>
+  <rect x="270" y="202" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="280" y="222" fill="#282728" font-size="11" font-weight="600">2</text>
+  <text x="296" y="222" fill="#6b7280" font-size="10">system prompt</text>
+  <rect x="416" y="202" width="56" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="444" y="222" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P7</text>
+  <rect x="270" y="240" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="280" y="260" fill="#282728" font-size="11" font-weight="600">3</text>
+  <text x="296" y="260" fill="#6b7280" font-size="10">prompt 끝 + 이어 씀</text>
+  <rect x="416" y="240" width="56" height="32" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="444" y="260" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P2</text>
+  <rect x="270" y="278" width="140" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="280" y="298" fill="#282728" font-size="11" font-weight="600">4</text>
+  <text x="296" y="298" fill="#6b7280" font-size="10">각자의 대화</text>
+  <rect x="416" y="278" width="56" height="32" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="444" y="298" fill="#282728" font-size="11" font-weight="600" text-anchor="middle">P10</text>
+  <text x="530" y="98" fill="#282728" font-size="13" font-weight="600">GPU 메모리 (물리 block)</text>
+  <rect x="530" y="148" width="74" height="58" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="567.0" y="173" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P0</text>
+  <text x="567.0" y="190" fill="#6b7280" font-size="9.5" text-anchor="middle">빈 칸</text>
+  <rect x="614" y="148" width="74" height="58" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="651.0" y="173" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P1</text>
+  <text x="651.0" y="190" fill="#6b7280" font-size="9.5" text-anchor="middle">A, B 공유</text>
+  <rect x="698" y="148" width="74" height="58" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="735.0" y="173" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P2</text>
+  <text x="735.0" y="190" fill="#6b7280" font-size="9.5" text-anchor="middle">B (원본)</text>
+  <rect x="782" y="148" width="74" height="58" rx="5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="819.0" y="173" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P3</text>
+  <text x="819.0" y="190" fill="#6b7280" font-size="9.5" text-anchor="middle">A (복사본)</text>
+  <rect x="530" y="216" width="74" height="58" rx="5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="567.0" y="241" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P4</text>
+  <text x="567.0" y="258" fill="#6b7280" font-size="9.5" text-anchor="middle">A</text>
+  <rect x="614" y="216" width="74" height="58" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="651.0" y="241" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P5</text>
+  <text x="651.0" y="258" fill="#6b7280" font-size="9.5" text-anchor="middle">A, B 공유</text>
+  <rect x="698" y="216" width="74" height="58" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="735.0" y="241" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P6</text>
+  <text x="735.0" y="258" fill="#6b7280" font-size="9.5" text-anchor="middle">빈 칸</text>
+  <rect x="782" y="216" width="74" height="58" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="819.0" y="241" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P7</text>
+  <text x="819.0" y="258" fill="#6b7280" font-size="9.5" text-anchor="middle">A, B 공유</text>
+  <rect x="530" y="284" width="74" height="58" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="567.0" y="309" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P8</text>
+  <text x="567.0" y="326" fill="#6b7280" font-size="9.5" text-anchor="middle">빈 칸</text>
+  <rect x="614" y="284" width="74" height="58" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="651.0" y="309" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P9</text>
+  <text x="651.0" y="326" fill="#6b7280" font-size="9.5" text-anchor="middle">빈 칸</text>
+  <rect x="698" y="284" width="74" height="58" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="735.0" y="309" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P10</text>
+  <text x="735.0" y="326" fill="#6b7280" font-size="9.5" text-anchor="middle">B</text>
+  <rect x="782" y="284" width="74" height="58" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="819.0" y="309" fill="#282728" font-size="12" font-weight="600" text-anchor="middle">P11</text>
+  <text x="819.0" y="326" fill="#6b7280" font-size="9.5" text-anchor="middle">빈 칸</text>
+  <path d="M 735.0 148 C 735.0 120, 819.0 120, 819.0 146" fill="none" stroke="#006cac" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-accent)"/>
+  <text x="548" y="134" fill="#006cac" font-size="10" font-weight="600">A가 쓰기 직전에 복사 (copy-on-write)</text>
+  <text x="30" y="385" fill="#282728" font-size="11">- 0~2번: 둘이 같은 물리 block을 가리킨다. 한 벌만 저장</text>
+  <text x="30" y="405" fill="#282728" font-size="11">- 3번: 반쯤 찬 block. 둘 다 빈칸에 이어 쓰려 하니 먼저 쓰는 A가 복사본을 받는다</text>
+  <text x="30" y="425" fill="#282728" font-size="11">- 4번: block이 다 차면 그때 빈 칸 아무거나 하나를 새로 받는다</text>
+  <rect x="30" y="452" width="16" height="16" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="54" y="465" fill="#282728" font-size="11">공유</text>
+  <rect x="110" y="452" width="16" height="16" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+  <text x="134" y="465" fill="#282728" font-size="11">A 전용</text>
+  <rect x="200" y="452" width="16" height="16" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="224" y="465" fill="#282728" font-size="11">B 전용</text>
+  <rect x="290" y="452" width="16" height="16" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="314" y="465" fill="#282728" font-size="11">빈 칸</text>
+  <text x="850" y="465" fill="#6b7280" font-size="10" text-anchor="end">그림은 앞부분을 3 block으로 줄임. 5,000토큰이면 312 block + 8토큰</text>
+</svg>

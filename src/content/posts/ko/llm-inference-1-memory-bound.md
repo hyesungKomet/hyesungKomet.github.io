@@ -15,7 +15,7 @@ draft: false
 
 > 시리즈 **LLM 추론, 연산에서 메모리로** (1/3)
 > 1. FLOPS를 2배로 올려도 ChatGPT는 빨라지지 않는다 (이 글)
-> 2. ChatGPT를 빠르게 만드는 다섯 가지 방법은 전부 같은 얘기다 (준비 중)
+> 2. [ChatGPT를 빠르게 만드는 다섯 가지 방법은 전부 같은 얘기다](/posts/llm-inference-2-five-ways/)
 > 3. NVIDIA는 왜 추론을 세 조각으로 쪼개기 시작했나 (준비 중)
 
 ## 내가 기각했던 sLLM
