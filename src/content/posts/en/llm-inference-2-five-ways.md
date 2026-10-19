@@ -17,7 +17,7 @@ draft: false
 > Series **LLM inference, from compute to memory** (2/3)
 > 1. [Doubling FLOPS won't make ChatGPT faster](/en/posts/llm-inference-1-memory-bound/)
 > 2. Five ways to make ChatGPT faster are all the same idea (this post)
-> 3. Why NVIDIA started splitting inference into three pieces (coming soon)
+> 3. [Why NVIDIA started splitting inference into three pieces](/en/posts/llm-inference-3-three-pieces/)
 
 ## How many meals does the cook need per delivery?
 
